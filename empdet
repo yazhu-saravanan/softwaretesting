@@ -1,0 +1,32 @@
+package testing;
+import java.util.Scanner;
+public class empdet {
+	Scanner ec= new Scanner(System.in);
+	public void empname()
+	{
+		System.out.println("Enter your name:");	
+		String name=ec.nextLine();
+		System.out.println("your name is:"+name);
+		
+		}
+	public void empid()
+	{
+		System.out.println("Enter your ID");
+		int id=ec.nextInt();
+		if(id==12)
+		{
+			System.out.println("you are selected");
+		}
+		else
+		{
+			System.out.println("you are not selected");
+		}
+	
+	
+	}
+	public static void main(String[]args)
+	{
+		empdet a= new empdet();
+		a.empname();
+		a.empid();
+		
