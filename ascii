@@ -1,0 +1,15 @@
+package testing;
+import java.util.Scanner;
+
+public class ascii {
+	public static void main(String[]args)
+	{
+	Scanner m=new Scanner(System.in);
+	System.out.println("Enter your Ascii");
+	String n=m.nextLine();
+	int b=n.compareTo("ABCF");
+	System.out.println(b);
+		
+	}
+
+}
