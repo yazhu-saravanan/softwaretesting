@@ -1,0 +1,15 @@
+package testing;
+
+
+public class containstring {
+	public static void main(String[]args)
+	{
+		String t="Welcome our School";
+		System.out.println(t);
+	
+		boolean x=t.contains("Welcome");
+		System.out.println(x);
+	}
+	
+
+}
