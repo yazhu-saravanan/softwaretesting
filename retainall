@@ -1,0 +1,33 @@
+package testing;
+
+import java.util.List;
+import java.util.ArrayList;
+
+
+public class retainall {
+			public static void main(String[]args)
+			{
+				List<Integer>m=new ArrayList<Integer>();
+				List<Integer>m1=new ArrayList<Integer>();
+				m.add(10);
+				m.add(20);
+				m.add(30);
+				m.add(40);
+				m.add(50);
+				m1.addAll(m);
+				System.out.println(m);
+				System.out.println(m1);
+				m1.add(100);
+				m1.add(200);
+				m.add(1000);
+				m.add(2000);
+				m1.retainAll(m);
+				System.out.println(m);
+				System.out.println(m1);
+				
+				
+			}
+
+		}
+
+
