@@ -1,0 +1,30 @@
+package testing;
+import java.util.Scanner;
+public class multitry {
+	public static void main(String[]args)
+	{
+		Scanner s=new Scanner(System.in);
+		System.out.println("Enter the two numbers");
+		int a=s.nextInt();
+		int b=s.nextInt();
+		try
+		{
+			int result=a/b;
+			System.out.println("Result is:"+result);
+			int[]arr={1,2,3};
+			System.out.println("Accessing element:"+arr[5]);
+     	}catch(ArithmeticException e)
+		{
+     		System.out.println("Arthmatic exception caught:"+e.getMessage());
+		}catch(ArrayIndexOutOfBoundsException e)
+		{
+			System.out.println("Array out of bound exception caught"+e);
+		}
+		finally
+		{
+			System.out.println("Finall block executed");
+		}
+		System.out.println("Program completed");
+		
+	}
+}
