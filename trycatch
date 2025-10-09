@@ -1,0 +1,28 @@
+package testing;
+import java.util.Scanner;
+public class tryclass {
+	public static void main(String[]args)
+	{
+		System.out.println("Program start");
+		Scanner a=new Scanner(System.in);
+		System.out.println("Enter the number1");
+		int n1=a.nextInt();
+		System.out.println("Enter the number2");
+		int n2=a.nextInt();
+		try
+		{
+			
+			int result =n1/n2;
+			System.out.println("Result:"+result);
+			
+		}
+		catch(ArithmeticException e)
+		{
+			System.out.println("Exception caught:"+e);
+		}finally
+		{
+			System.out.println("Finally block executed");
+		}
+		System.out.println("programs continued");
+	}
+}
