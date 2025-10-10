@@ -1,0 +1,18 @@
+package testing;
+import java.util.List;
+import java.util.ArrayList;
+public class enhancefor {
+	public static void main(String[]args)
+	{
+		List<String>n=new ArrayList<String>();
+		n.add("yazhu");
+		n.add("elango");
+		n.add("naveen");
+		n.add("jegan");
+		for(String k:n)
+		{
+			System.out.println(k);
+		}
+	}
+
+}
