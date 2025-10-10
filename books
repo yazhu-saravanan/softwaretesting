@@ -1,0 +1,34 @@
+package testing;
+import java.util.Scanner;
+
+public class Books
+{
+	Scanner e= new Scanner(System.in);
+	public void Bookname()
+	{
+		System.out.println("Enter the Book Name:");
+		String a=e.nextLine();
+		System.out.println("Book Name is:"+a);
+	}
+	public void Bookid()
+	{
+		System.out.println("Enter the book id:");
+		int id=e.nextInt();
+		if(id<=26)
+		{
+			System.out.println("This is our libirary book");
+		}
+		else
+		{
+			System.out.println("This is not our book");
+		}
+		
+	}
+	public static void main(String[]args)
+	{
+		Books a= new Books();
+		a.Bookname();
+		a.Bookid();
+	}
+	
+}
