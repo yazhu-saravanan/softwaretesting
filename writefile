@@ -1,0 +1,25 @@
+package testing;
+import java.io.FileWriter;
+import java.io.IOException;
+public class writefileex {
+	
+	
+		public static void main(String[]args)
+		{
+			
+			try
+			{
+				FileWriter write=new FileWriter("filenew.txt");
+				write.write("hellow its me yazhu");
+				write.close();
+				System.out.println("Sccessufully wrote to the file");
+				}
+			catch(IOException e)
+			{
+				e.printStackTrace();
+			}
+		}
+	}
+
+
+
