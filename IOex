@@ -1,0 +1,29 @@
+package testing;
+
+import java.io.IOException;
+
+public class IOEx {
+static void readfile()throws IOException
+{
+	
+	throw new IOException("File not found");
+}static void writefile()throws ArithmeticException
+{
+	System.out.println("File is writting");
+	throw new ArithmeticException("File is not writting");
+}
+public static void main(String[]args)
+{
+	try
+	{
+		
+		writefile();
+	}catch(Exception e)
+	{
+		System.out.println("Exception caught:"+e.getMessage());
+	}finally
+	{
+		System.out.println("The file is readed");
+	}
+}
+}
