@@ -1,0 +1,22 @@
+package testing;
+import java.io.File;
+
+public class deleteex {
+	public static void main(String[]args)
+	{
+		
+		
+			File ex=new File("filenew.txt");
+			if(ex.delete())
+			{
+				System.out.println("Deleted the file"+ex.getName());
+				
+			}else
+			{
+				System.out.println("Failed to delete the file");		
+				}
+		
+	
+	}
+
+}
