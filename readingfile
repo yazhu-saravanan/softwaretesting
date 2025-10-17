@@ -1,0 +1,28 @@
+package testing;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileWriter;
+import java.io.OutputStreamWriter;
+import java.util.Scanner;
+
+public class readingex {
+	public static void main(String[]args)
+	{
+		try
+		{
+			
+		File ex=new File("filenew.txt");
+		Scanner reader=new Scanner(ex);
+		while(reader.hasNextLine())
+		{
+			String data=reader.next();
+			System.out.println(data);
+		}reader.close();
+		}catch(FileNotFoundException e)
+
+	{
+			e.printStackTrace();
+			
+	}
+	
+	}
