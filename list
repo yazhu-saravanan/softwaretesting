@@ -1,0 +1,17 @@
+package testing;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class list {
+	public static void main(String[]args)
+	{
+		List s=new ArrayList();
+		s.add(10);
+		s.add(10000000);
+		s.add("haii");
+		s.add(true);
+		System.out.println(s);
+	}
+
+}
