@@ -1,0 +1,20 @@
+package testing;
+import java.util.Scanner;
+public class mulitiplication
+{
+	public static void main(String[]args)
+	{
+		Scanner r=new Scanner(System.in);
+		System.out.println("Which table you want");
+		int n=r.nextInt();
+		int i=1;
+		do
+		{
+			System.out.println(i+"X"+n+"="+(i*n));
+			i++;
+		}while(i<=16);
+		System.out.println("your table is successfully showed");
+	}
+
+}
+
