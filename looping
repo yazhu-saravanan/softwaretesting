@@ -1,0 +1,15 @@
+package testing;
+
+public class loopingcon {
+	public static void main(String[]args)
+	{
+		String r="This is Yazhini house";
+		String[]m=r.split(" ");
+		boolean b=r.contains("Welcome");
+		System.out.println(b);
+		for(int i=0;i<m.length;i++)
+		{
+			System.out.println(m[i]);
+		}
+	}
+}
