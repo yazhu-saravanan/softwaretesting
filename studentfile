@@ -1,0 +1,40 @@
+package testing;
+import java.util.Scanner;
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
+public class stdtfile {
+	public static void main(String[]args)
+	{
+		try {
+			File write=new File("Student.txt");
+			if(write.createNewFile())
+			{
+				System.out.println("File is created *"+write.getName());
+			}else
+			{
+				System.out.println("File is already exits");
+			}FileWriter writer=new FileWriter("student.txt");
+			writer.write("Name:S Yazhini,Age:20");
+		writer.close();		
+		System.out.println("Wrote to Sucessfully in the file");
+		
+			
+			Scanner reader=new Scanner(write);
+		System.out.println("Reading from the file");
+		while(reader.hasNextLine())
+		{
+			String data=reader.nextLine();
+			System.out.println(data);
+		}
+		reader.close();
+		
+		
+		}catch(IOException e)
+		{
+			System.out.println("error occured");
+			e.printStackTrace();
+		}
+	}
+
+}
