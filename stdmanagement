@@ -1,0 +1,97 @@
+package testing;
+import java.util.Scanner;
+import java.util.ArrayList;
+
+public class studentmanagement {
+	int id;
+	String name;
+	int mark;
+	 studentmanagement(int id,String name,int mark){
+		 this.id=id;
+		 this .name=name;
+		 this.mark=mark;
+	 }
+	void display()
+	{
+		System.out.println("\nID:"+id+"\nName:"+name+"\nmark:"+mark);
+	}
+public static void main(String[]args)
+{
+	Scanner sc=new Scanner(System.in);
+	ArrayList< studentmanagement>list=new ArrayList<>();
+	int choice;
+	do {
+		System.out.println("\n======= Student management System=======");
+		System.out.println("1.Add Student details");
+		System.out.println("2.view all Students");
+		System.out.println("3.Search Student by ID");
+		System.out.println("4.Delete Student ID:");
+		System.out.println("5.exit");
+		System.out.println("Enter your choice");
+		choice=sc.nextInt();
+		switch(choice) {
+		case 1:
+			
+			System.out.println("Enter your ID:");
+			int id=sc.nextInt();
+			System.out.println("Enter your name:");
+			String name=sc.next();
+			System.out.println("Enter your mark");
+			int mark=sc.nextInt();
+			studentmanagement s=new studentmanagement( id, name, mark);
+			list.add(s);
+			System.out.println("Student details added Successfully");
+			break;
+		case 2:
+			System.out.println("\n-----Student List-----");
+			if(list.isEmpty()) {
+				System.out.println("No Students found");
+			}
+			else
+			{
+				for(studentmanagement k: list)
+				{
+					k.display();
+				}
+			}break;
+		case 3:
+			System.out.println("Enter the Student ID to search:");
+			int searchid=sc.nextInt();
+			for(studentmanagement k: list)
+			{
+				if(k.id==searchid)
+				{
+					System.out.println("Student found");
+					k.display();
+				}else
+				{
+					System.out.println("Student not found");
+				}
+			}break;
+			
+		case 4:
+			
+			System.out.println("Enter your delete id:");
+			int deleted=sc.nextInt();
+		boolean removed=list.removeIf(k-> k.id==deleted);
+			if(removed)
+			{
+				System.out.println("Student id successfully deleted");
+			}else
+			{
+				System.out.println("Student not found");
+			}break;
+		case 5:
+			System.out.println("-------Exiting Thank you for your wonderfull timing----");
+			break;
+		default:
+			System.out.println("Invalid choice");
+			break;
+			
+			
+		}
+	
+	}while(choice!=5);
+	sc.close();
+}
+}
