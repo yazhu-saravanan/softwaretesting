@@ -1,0 +1,21 @@
+package testing;
+import java.util.Scanner;
+
+public class sumofdigits {
+	public static void main(String[]args)
+	{
+		Scanner c=new Scanner(System.in);
+		System.out.println("Enter your number:");
+		int n=c.nextInt();
+		int sum=0;
+		for(int i=1;i<=n;i++)
+		{
+			int digit =n%10;
+			sum=sum+digit;
+
+		}
+		System.out.println(sum);
+
+	}
+	
+}
