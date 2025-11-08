@@ -1,0 +1,16 @@
+package testing;
+import java.util.Scanner;
+
+public class startend {
+
+	public static void main(String[]args)
+	{
+		Scanner r=new Scanner(System.in);
+		System.out.println("Enter your String");
+		String n=r.nextLine();
+		boolean b=n.startsWith("I");
+		System.out.println(b);
+		boolean b1=n.endsWith("Thankyou");
+		System.out.println(b1);
+	}
+}
